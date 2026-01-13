@@ -1,20 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <title>{{ page_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{ salla.head() }}
+  {# خط Tajawal #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ 'assets/styles/main.css' | asset }}">
+  {# ملفات الثيم #}
+  <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
+
+  {{ head() }}
 </head>
 
 <body>
 
-  {% block content %}{% endblock %}
+  {# هنا راح يطلع محتوى الصفحة (index وغيره) #}
+    <!-- 🏠 HEADER -->
+  <header class="space-header">
+    <div class="header-container">
+      <a href="#home" class="logo">
+        <img src="https://a.top4top.io/p_3664apo3g1.png" alt="وارف">
+        <span class="logo-text">وارف</span>
+      </a>
 
-  {{ salla.footer() }}
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">الرئيسية</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#features">المميزات</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
 
-  <script src="{{ 'assets/scripts/main.js' | asset }}"></script>
+      <div class="cart-icon" onclick="addToCart()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  {{ content() }}
+    <!-- 🌍 FOOTER -->
+  <footer class="space-footer">
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <img src="https://a.top4top.io/p_3664apo3g1.png" alt="وارف" style="height: 40px;">
+          <span class="logo-text">وارف</span>
+        </a>
+        <p>شريكك في رحلة التجارة الإلكترونية نحو القمر والنجوم</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">🏠 الرئيسية</a></li>
+          <li><a href="#services">🪐 الخدمات</a></li>
+          <li><a href="#features">✨ المميزات</a></li>
+          <li><a href="#contact">📞 تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#">🎨 تصميم المتاجر</a></li>
+          <li><a href="#">📢 التسويق الرقمي</a></li>
+          <li><a href="#">📄 وثيقة العمل الحر</a></li>
+          <li><a href="#">🔗 ربط أدوات قوقل</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="mailto:info@waarfe.com">📧 info@waarfe.com</a></li>
+          <li><a href="#">📱 واتساب</a></li>
+          <li><a href="#">🐦 تويتر</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 وارف. جميع الحقوق محفوظة 🚀</p>
+      <div class="social-links">
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💬</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="{{ asset('assets/scripts/main.js') }}"></script>
+  {{ footer() }}
 </body>
 </html>

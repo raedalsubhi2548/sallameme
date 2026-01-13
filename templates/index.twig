@@ -2,9 +2,165 @@
 
 {% block content %}
 
-<section class="hero-section">
-  <h1>نبني لك متجرك في عالم النجوم 🚀</h1>
-  <p>تصميم ثيم سلة كوني – Waarfe Cosmic</p>
-</section>
+  <!-- ✨ STARFIELD -->
+  <div id="starfield">
+    <div class="stars-layer stars-layer-1"></div>
+    <div class="stars-layer stars-layer-2"></div>
+  </div>
+  <div class="nebula-overlay"></div>
+
+  <!-- Shooting Stars -->
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- Floating Planets -->
+  <div class="floating-planet planet-1"></div>
+  <div class="floating-planet planet-2"></div>
+  <div class="floating-planet planet-3"></div>
+
+  <!-- 🚀 Rocket -->
+  <div class="rocket-launch" id="rocket">🚀</div>
+
+  <!-- 🌌 HERO -->
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>🚀</span>
+        <span>انطلق نحو الفضاء الرقمي</span>
+      </div>
+
+      <h1 class="hero-title">
+        نبني لك متجرك
+        <br>
+        <span class="highlight">في عالم النجوم</span>
+      </h1>
+
+      <p class="hero-description">
+        وارف شريكك في رحلة التجارة الإلكترونية. نصمم متاجر احترافية،
+        نسوّق منتجاتك، ونأخذ بيدك نحو القمر والنجوم.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">
+          <span>🪐</span>
+          <span>استكشف خدماتنا</span>
+        </a>
+        <a href="#contact" class="btn-secondary">تواصل معنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🪐 SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <h2 class="section-title">🪐 كواكب خدماتنا</h2>
+      <p class="section-subtitle">كل خدمة كوكب في مجرتنا، اختر وجهتك نحو النجاح</p>
+    </div>
+
+    <div class="services-orbit">
+      <div class="service-planet">
+        <div class="planet-icon teal">🎨</div>
+        <h3 class="service-title">تصميم المتاجر</h3>
+        <p class="service-description">نصمم لك متجر سلة احترافي يعكس هويتك التجارية بشكل مميز</p>
+        <div class="service-price">500 <span>ر.س</span></div>
+        <button class="btn-primary" style="margin-top: 25px; width: 100%;" onclick="addToCart()">🚀 اطلب الآن</button>
+      </div>
+
+      <div class="service-planet">
+        <div class="planet-icon purple">📢</div>
+        <h3 class="service-title">التسويق الرقمي</h3>
+        <p class="service-description">حملات إعلانية مدروسة وإدارة سوشيال ميديا تزيد مبيعاتك</p>
+        <div class="service-price">300 <span>ر.س</span></div>
+        <button class="btn-primary" style="margin-top: 25px; width: 100%;" onclick="addToCart()">🚀 اطلب الآن</button>
+      </div>
+
+      <div class="service-planet">
+        <div class="planet-icon pink">📄</div>
+        <h3 class="service-title">وثيقة العمل الحر</h3>
+        <p class="service-description">نساعدك في استخراج وثيقة العمل الحر لجميع الأنشطة</p>
+        <div class="service-price">150 <span>ر.س</span></div>
+        <button class="btn-primary" style="margin-top: 25px; width: 100%;" onclick="addToCart()">🚀 اطلب الآن</button>
+      </div>
+
+      <div class="service-planet">
+        <div class="planet-icon gold">🔗</div>
+        <h3 class="service-title">ربط أدوات قوقل</h3>
+        <p class="service-description">ربط Analytics و Search Console لتتبع أداء متجرك</p>
+        <div class="service-price">100 <span>ر.س</span></div>
+        <button class="btn-primary" style="margin-top: 25px; width: 100%;" onclick="addToCart()">🚀 اطلب الآن</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✨ FEATURES -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <h2 class="section-title">✨ لماذا وارف؟</h2>
+      <p class="section-subtitle">مميزات تجعلنا خيارك الأول</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-star">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-content">
+          <h4>سرعة التنفيذ</h4>
+          <p>ننجز مشروعك في 2-6 أيام فقط</p>
+        </div>
+      </div>
+
+      <div class="feature-star">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-content">
+          <h4>جودة عالية</h4>
+          <p>تصاميم احترافية تليق بعلامتك</p>
+        </div>
+      </div>
+
+      <div class="feature-star">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <h4>دعم مستمر</h4>
+          <p>فريق دعم متواجد على مدار الساعة</p>
+        </div>
+      </div>
+
+      <div class="feature-star">
+        <div class="feature-icon">💰</div>
+        <div class="feature-content">
+          <h4>أسعار منافسة</h4>
+          <p>خدمات بأسعار مناسبة للجميع</p>
+        </div>
+      </div>
+
+      <div class="feature-star">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-content">
+          <h4>موثوقية</h4>
+          <p>موثّقين في منصة الأعمال</p>
+        </div>
+      </div>
+
+      <div class="feature-star">
+        <div class="feature-icon">🌟</div>
+        <div class="feature-content">
+          <h4>خبرة واسعة</h4>
+          <p>مئات العملاء الراضين</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-box">
+      <h2 class="cta-title">🌙 جاهز للانطلاق؟</h2>
+      <p class="cta-description">تواصل معنا الآن وخلنا نبدأ رحلتك نحو النجاح</p>
+      <a href="https://wa.me/966XXXXXXXXX" class="btn-primary" target="_blank" rel="noopener">
+        <span>💬</span>
+        <span>تواصل عبر واتساب</span>
+      </a>
+    </div>
+  </section>
 
 {% endblock %}

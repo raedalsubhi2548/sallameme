@@ -1,36 +1,36 @@
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    const targetSel = this.getAttribute('href');
-    const target = document.querySelector(targetSel);
-    if (!target) return;
+// Smooth scroll (بس إذا العنصر موجود)
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", (e) => {
+    const id = a.getAttribute("href");
+    if (!id || id === "#") return;
 
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth' });
+    const el = document.querySelector(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 });
 
-// Cart counter + Rocket animation
+// Cart & Rocket (آمن حتى لو العناصر غير موجودة)
 let cart = 0;
 
 window.addToCart = function addToCart() {
-  cart += 1;
+  cart++;
+  const counter = document.getElementById("cartCount");
+  if (counter) counter.textContent = String(cart);
 
-  const cartCountEl = document.getElementById('cartCount');
-  if (cartCountEl) cartCountEl.textContent = String(cart);
-
-  const rocket = document.getElementById('rocket');
+  const rocket = document.getElementById("rocket");
   if (rocket) {
-    rocket.classList.add('animate');
-    setTimeout(() => rocket.classList.remove('animate'), 2000);
+    rocket.classList.add("animate");
+    setTimeout(() => rocket.classList.remove("animate"), 2000);
   }
 };
 
-// Header background change on scroll
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.space-header');
+// Header scroll (آمن)
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".space-header");
   if (!header) return;
-
   header.style.background =
-    window.scrollY > 50 ? 'rgba(11, 19, 43, 0.95)' : 'rgba(11, 19, 43, 0.8)';
+    window.scrollY > 50 ? "rgba(11, 19, 43, 0.95)" : "rgba(11, 19, 43, 0.8)";
 });
